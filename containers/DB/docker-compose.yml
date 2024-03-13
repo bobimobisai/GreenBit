@@ -9,3 +9,4 @@ services:
       - POSTGRES_PASSWORD=greenbit
       - POSTGRES_USER=admin
     image: postgres:15.5-alpine3.18
+    command: postgres -c 'listen_addresses=0.0.0.0' -c 'port=5432'
